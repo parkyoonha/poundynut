@@ -286,7 +286,7 @@ const LandingPage: React.FC = () => {
 
     },
     {
-      img: "/review2.png",
+      img: "/review2.webp",
       video: VID_SLIDE_3,
       text: "day3",
       review: "almondbread<br/>penutbutter<br/>celery",
@@ -337,7 +337,7 @@ const LandingPage: React.FC = () => {
               >
                 <div className="w-full h-full overflow-hidden">
                   <ImageWithFallback
-                    src="/ww.png"
+                    src="/ww.webp"
                     alt="Almond bread"
                     className="w-full h-full object-cover scale-160 md:scale-150 -translate-y-10 md:-translate-y-25 translate-x-20 md:translate-x-35"
                   />
@@ -434,7 +434,7 @@ const LandingPage: React.FC = () => {
                 className="flex-[2.12] h-full bg-gray-200 overflow-hidden relative group cursor-pointer"
               >
                 
-                <img src="/gg2.png" alt="Gallery image 1" className="w-full h-full object-cover" />
+                <img src="/gg2.webp" alt="Gallery image 1" className="w-full h-full object-cover" />
                 <span className="absolute bottom-4 right-4 z-10 text-sm text-black font-semibold group-hover:opacity-0 transition-opacity duration-300">flavor butter</span>
                 <div className="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex flex-row items-start justify-start gap-27 px-[1.5cm] py-[2cm] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -466,7 +466,7 @@ const LandingPage: React.FC = () => {
                 transition={{ delay: 0.1 }}
                 className="flex-1 h-full bg-gray-200 overflow-hidden relative group cursor-pointer"
               >
-                <img src="/tr.png" alt="Gallery image 5" className="w-full h-full object-cover scale-125 translate-y-2" />
+                <img src="/tr.webp" alt="Gallery image 5" className="w-full h-full object-cover scale-125 translate-y-2" />
                 <span className="absolute bottom-4 right-4 z-10 text-sm text-black font-semibold group-hover:opacity-0 transition-opacity duration-300">mushroom</span>
                 <div className="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex flex-col items-start justify-start px-[1.5cm] py-[2cm] space-y-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -495,7 +495,7 @@ const LandingPage: React.FC = () => {
                 viewport={{ once: true }}
                 className="flex-1 h-full bg-gray-200 overflow-hidden relative group cursor-pointer"
               >
-                <img src="/uu.png" alt="Gallery image 4" className="w-full h-full object-cover scale-160 -translate-y-10 translate-x-10" />
+                <img src="/uu.webp" alt="Gallery image 4" className="w-full h-full object-cover scale-160 -translate-y-10 translate-x-10" />
                 <span className="absolute bottom-4 right-4 z-10 text-sm text-white font-semibold group-hover:opacity-0 transition-opacity duration-300">Jambon-Beurre</span>
                 <div className="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex flex-col items-start justify-start px-[1.5cm] py-[2cm] space-y-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -519,7 +519,7 @@ const LandingPage: React.FC = () => {
                 viewport={{ once: true }}
                 className="flex-1 h-full bg-gray-200 overflow-hidden relative group cursor-pointer"
               >
-                <img src="/gs.png" alt="Gallery image 3" className="w-full h-full object-cover scale-112 translate-x-2 -translate-y-3" />
+                <img src="/gs.webp" alt="Gallery image 3" className="w-full h-full object-cover scale-112 translate-x-2 -translate-y-3" />
                 
                 <span className="absolute bottom-4 right-4 z-10 text-sm text-black font-semibold group-hover:opacity-0 transition-opacity duration-300">marinated tomato</span>
                 <div className="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -543,7 +543,7 @@ const LandingPage: React.FC = () => {
                 viewport={{ once: true }}
                 className="flex-1 h-full bg-gray-200 overflow-hidden relative group cursor-pointer"
               >
-               <img src="/tt.png" alt="Gallery image 2" className="w-full h-full object-cover scale-120 -translate-x-10" />
+               <img src="/tt.webp" alt="Gallery image 2" className="w-full h-full object-cover scale-120 -translate-x-10" />
                <span className="absolute bottom-4 right-4 z-10 text-sm text-white font-semibold group-hover:opacity-0 transition-opacity duration-300">creamcheese apple</span>
                 <div className="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex flex-col items-start justify-start px-[1.5cm] py-[2cm] space-y-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -570,7 +570,7 @@ const LandingPage: React.FC = () => {
                 className="w-full h-[400px] bg-gray-200 overflow-hidden relative cursor-pointer"
                 onClick={() => setSelectedRecipe(recipeData[0])}
               >
-                <img src="/gg.png" alt="Gallery image 1" className="w-full h-full object-cover scale-150 translate-x-10 -translate-y-10" />
+                <img src="/gg.webp" alt="Gallery image 1" className="w-full h-full object-cover scale-150 translate-x-10 -translate-y-10" />
                 <span className="absolute bottom-2 right-4 z-10 text-sm text-black font-semibold flex items-center gap-1">flavor butter <ArrowRight className="w-4 h-4" /></span>
               </motion.div>
             </div>
@@ -584,7 +584,7 @@ const LandingPage: React.FC = () => {
                 className="w-full h-[400px] bg-gray-200 overflow-hidden relative cursor-pointer"
                 onClick={() => setSelectedRecipe(recipeData[1])}
               >
-                <img src="/tt.png" alt="Gallery image 2" className="w-full h-full object-cover scale-100 -translate-x-0 -translate-y-0" />
+                <img src="/tt.webp" alt="Gallery image 2" className="w-full h-full object-cover scale-100 -translate-x-0 -translate-y-0" />
                 <span className="absolute bottom-2 right-4 z-10 text-sm text-white font-semibold flex items-center gap-1">creamcheese apple <ArrowRight className="w-4 h-4" /></span>
               </motion.div>
             </div>
@@ -598,7 +598,7 @@ const LandingPage: React.FC = () => {
                 className="w-full h-[400px] bg-gray-200 overflow-hidden relative cursor-pointer"
                 onClick={() => setSelectedRecipe(recipeData[2])}
               >
-                <img src="/qq.png" alt="Gallery image 3" className="w-full h-full object-cover scale-100 translate-x-0 -translate-y-0" />
+                <img src="/qq.webp" alt="Gallery image 3" className="w-full h-full object-cover scale-100 translate-x-0 -translate-y-0" />
                 <span className="absolute bottom-2 right-4 z-10 text-sm text-black font-semibold flex items-center gap-1">marinated tomato <ArrowRight className="w-4 h-4" /></span>
               </motion.div>
             </div>
@@ -612,7 +612,7 @@ const LandingPage: React.FC = () => {
                 className="w-full h-[400px] bg-gray-200 overflow-hidden relative cursor-pointer"
                 onClick={() => setSelectedRecipe(recipeData[3])}
               >
-                <img src="/KakaoTalk_20260203_181056189.jpg" alt="Gallery image 5" className="w-full h-full object-cover" />
+                <img src="/KakaoTalk_20260203_181056189.webp" alt="Gallery image 5" className="w-full h-full object-cover" />
                 <span className="absolute bottom-2 right-4 z-10 text-sm text-white font-semibold flex items-center gap-1">Jambon-Beurre <ArrowRight className="w-4 h-4" /></span>
               </motion.div>
             </div>
@@ -626,7 +626,7 @@ const LandingPage: React.FC = () => {
                 className="w-full h-[400px] bg-gray-200 overflow-hidden relative cursor-pointer"
                 onClick={() => setSelectedRecipe(recipeData[4])}
               >
-                <img src="/uu.png" alt="Gallery image 4" className="w-full h-full object-cover scale-150 -translate-y-10 translate-x-10" />
+                <img src="/uu.webp" alt="Gallery image 4" className="w-full h-full object-cover scale-150 -translate-y-10 translate-x-10" />
                 
                 <span className="absolute bottom-2 right-4 z-10 text-sm text-black font-semibold flex items-center gap-1">mushroom <ArrowRight className="w-4 h-4" /></span>
               </motion.div>
@@ -955,10 +955,10 @@ const LandingPage: React.FC = () => {
           >
             <div className="flex gap-6 md:gap-[7.29vw] pr-4 md:pr-12" style={{ width: 'max-content' }}>
               {[
-                  { src: '/11.png', label: 'original 오리지널' },
-                  { src: '/22.png', label: 'vegan 비건' },
-                  { src: '/33.png', label: 'nuts 견과류' },
-                  { src: '/44.png', label: 'konjak 곤약' }
+                  { src: '/11.webp', label: 'original 오리지널' },
+                  { src: '/22.webp', label: 'vegan 비건' },
+                  { src: '/33.webp', label: 'nuts 견과류' },
+                  { src: '/44.webp', label: 'konjak 곤약' }
                 ].map((item, idx) => (
                 <motion.div
                   key={idx}
