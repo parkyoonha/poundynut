@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AnimatePresence } from 'motion/react';
 import LandingPage from '@/app/components/LandingPage';
 import Opening from '@/app/components/Opening';
