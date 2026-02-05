@@ -719,13 +719,13 @@ const LandingPage: React.FC = () => {
                     className="absolute z-20 md:hidden "
                     style={{
                       width: '2px',
-                      height: '150px',
+                      height: '220px',
                       backgroundColor: '#111111',
                       transform: 'rotate(45deg)',
                       transformOrigin: 'center',
                       top: '50%',
                       left: '50%',
-                      marginTop: '-75px',
+                      marginTop: '-110px',
                       marginLeft: '-1px',
                     }}
                   />
