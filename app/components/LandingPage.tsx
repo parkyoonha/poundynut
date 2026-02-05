@@ -702,10 +702,11 @@ const LandingPage: React.FC = () => {
                 >
                   {/* 45도 대각선 - 모바일/데스크톱 각각 */}
                   <div
-                    className="absolute z-20 bg-gray-900 hidden md:block"
+                    className="absolute z-20 hidden md:block"
                     style={{
                       width: '2px',
                       height: '400px',
+                      backgroundColor: '#111111',
                       transform: 'rotate(45deg)',
                       transformOrigin: 'center',
                       top: '50%',
@@ -715,10 +716,11 @@ const LandingPage: React.FC = () => {
                     }}
                   />
                   <div
-                    className="absolute z-20 bg-gray-900 md:hidden"
+                    className="absolute z-20 md:hidden"
                     style={{
                       width: '2px',
                       height: '150px',
+                      backgroundColor: '#111111',
                       transform: 'rotate(45deg)',
                       transformOrigin: 'center',
                       top: '50%',
@@ -922,6 +924,7 @@ const LandingPage: React.FC = () => {
               src="/Group 19.svg"
               alt="arrow"
               className="h-6 md:h-8"
+              style={{ filter: 'brightness(0)' }}
               initial={{ x: 0 }}
               whileInView={{ x: [0, 10, 0] }}
               viewport={{ once: true }}
