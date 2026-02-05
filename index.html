@@ -1,13 +1,18 @@
 <!doctype html>
-<html lang="ko" style="color-scheme: light;">
+<html lang="ko" style="color-scheme: light only;">
   <head>
-    <meta name="color-scheme" content="light">
+    <meta name="color-scheme" content="light only">
+    <meta name="supported-color-schemes" content="light only">
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="Ellipse 98.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>poundynut</title>
+    <style>
+      :root { color-scheme: light only !important; }
+      * { color-scheme: light only !important; }
+    </style>
   </head>
-  <body>
+  <body style="background-color: #ffffff;">
     <div id="root"></div>
     <script type="module" src="/app/main.tsx"></script>
   </body>
