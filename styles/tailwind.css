@@ -17,15 +17,20 @@ html, body {
   color: #111111 !important;
 }
 
-/* Prevent dark mode color changes */
+/* Dark mode: invert dark elements to white */
 @media (prefers-color-scheme: dark) {
-  html, body, #root {
-    background-color: #ffffff !important;
-    color: #111111 !important;
+  .dark-invert {
+    filter: invert(1) !important;
   }
 
-  img, svg {
-    filter: none !important;
+  /* Make text-gray-900 and text-black white in dark mode */
+  .text-gray-900, .text-black {
+    color: #ffffff !important;
+  }
+
+  /* Make bg-gray-900 elements white */
+  .bg-gray-900 {
+    background-color: #ffffff !important;
   }
 }
 

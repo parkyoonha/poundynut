@@ -702,7 +702,7 @@ const LandingPage: React.FC = () => {
                 >
                   {/* 45도 대각선 - 모바일/데스크톱 각각 */}
                   <div
-                    className="absolute z-20 hidden md:block"
+                    className="absolute z-20 hidden md:block dark-invert"
                     style={{
                       width: '2px',
                       height: '400px',
@@ -716,7 +716,7 @@ const LandingPage: React.FC = () => {
                     }}
                   />
                   <div
-                    className="absolute z-20 md:hidden"
+                    className="absolute z-20 md:hidden dark-invert"
                     style={{
                       width: '2px',
                       height: '150px',
@@ -923,8 +923,7 @@ const LandingPage: React.FC = () => {
             <motion.img
               src="/Group 19.svg"
               alt="arrow"
-              className="h-6 md:h-8"
-              style={{ filter: 'brightness(0)' }}
+              className="h-6 md:h-8 dark-invert"
               initial={{ x: 0 }}
               whileInView={{ x: [0, 10, 0] }}
               viewport={{ once: true }}
