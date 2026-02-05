@@ -57,7 +57,7 @@ const VID_SLIDE_3 = "/KakaoTalk_20260203_173820482.mp4";
 // const VID_SLIDE_3 = "https://assets.mixkit.co/videos/preview/mixkit-fresh-bread-loaves-on-a-bakery-shelf-4288-large.mp4";
 
 const LandingPage: React.FC = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, duration: 20, axis: 'y' });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, duration: 20, axis: 'y', watchDrag: false });
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const section7WrapperRef = useRef<HTMLDivElement>(null);
   const section5WrapperRef = useRef<HTMLDivElement>(null);

@@ -7,6 +7,10 @@
   --breakpoint-md: 900px;
 }
 
+:root {
+  color-scheme: light only;
+}
+
 body {
   font-family: 'Geist', sans-serif;
 }
