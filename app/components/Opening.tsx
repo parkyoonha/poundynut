@@ -48,14 +48,14 @@ const Opening: React.FC<OpeningProps> = ({ onComplete }) => {
                 <motion.path
                   d="M2046.5 50C2609.14 50 3117 100.017 3482.89 180.203C3666.24 220.385 3811.23 267.573 3909.17 318.318C3958.2 343.723 3992.96 368.767 4014.88 392.235C4036.56 415.454 4043 434.077 4043 448.5C4043 462.923 4036.56 481.546 4014.88 504.765C3992.96 528.233 3958.2 553.277 3909.17 578.682C3811.23 629.427 3666.24 676.615 3482.89 716.797C3117 796.983 2609.14 847 2046.5 847C1483.86 847 975.998 796.983 610.109 716.797C426.758 676.615 281.765 629.427 183.827 578.682C134.797 553.277 100.036 528.233 78.123 504.765C56.4434 481.546 50 462.923 50 448.5C50 434.077 56.4434 415.454 78.123 392.235C100.036 368.767 134.797 343.723 183.827 318.318C281.765 267.573 426.758 220.385 610.109 180.203C975.998 100.017 1483.86 50 2046.5 50Z"
                   stroke="black"
-                  strokeWidth="50"
+                  strokeWidth="65"
                   initial={{ pathLength: 0 }}
                   animate={{ pathLength: 1 }}
                   transition={{ duration: 1.5, ease: "easeInOut" }}
                 />
               </svg>
               <span
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[18px] md:text-[22px] font-medium text-black lowercase tracking-tight"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[18px] md:text-[22px] font-semibold text-black lowercase tracking-tight"
                 style={{ fontFamily: "'Geist', sans-serif" }}
               >
                 poundynut
