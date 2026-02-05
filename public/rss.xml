@@ -5,7 +5,13 @@
     <link>https://poundynut.com</link>
     <description>아몬드가루로 만든 식빵으로 새로운 식단을 시작해보세요.</description>
 
-  
+  <item>
+      <title>심플하고 깔끔한 원재료</title>
+      <link>https://poundynut.com/</link>
+      <description>아몬드가루로 만든 식빵으로 새로운 식단을 시작해보세요.</description>
+      <pubDate>Tue, 04 Feb 2026 09:00:00 GMT</pubDate>
+    </item>
+
 
   </channel>
 </rss>
