@@ -350,7 +350,7 @@ const LandingPage: React.FC = () => {
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 2.5 }}
+            transition={{ duration: 0.8, delay: 2.8}}
             className="hidden md:block absolute bottom-[1cm] left-[1cm] w-[35%] text-[42px] font-medium text-gray-900 leading-[1.2] font-geist-gothic z-30"
           >
             whole almond baked for <br/>better dietary habits.
@@ -650,7 +650,7 @@ const LandingPage: React.FC = () => {
               viewport={{ once: true }}
               className="w-full md:w-1/2"
             >
-              <h2 className="text-3xl md:text-[4rem] font-geist-gothic font-medium leading-[1.1] md:leading-[1.0] word-keep-all text-gray-900 py-0 md:py-0">
+              <h2 className="text-[34px] md:text-[4rem] font-geist-gothic font-medium leading-[1.1] md:leading-[1.0] word-keep-all text-gray-900 py-0 md:py-0">
                 I want to <br/>share my diet<br/>experience.
               </h2>
             </motion.div>
@@ -662,7 +662,7 @@ const LandingPage: React.FC = () => {
               viewport={{ once: true }}
               className="w-full md:w-1/2 pt-13 md:pt-0"
             >
-              <div className="text-[12px] md:text-xl text-black space-y-3 md:space-y-4 leading-normal md:leading-relaxed text-justify" style={{ fontFamily: "'Gothic A1', sans-serif", fontWeight: 500 }}>
+              <div className="text-[13px] md:text-xl text-black space-y-3 md:space-y-4 leading-normal md:leading-relaxed text-justify" style={{ fontFamily: "'Gothic A1', sans-serif", fontWeight: 500 }}>
                 <p>
                   한때 우리는 밀가루를 너무도 자연스럽게 먹고 있었습니다.<br/>아침의 토스트, 바쁜 날의 간편한 한 끼,<br/>일상 곳곳에 빵은 늘 함께 있었죠.<br/>익숙하고 맛있었기에,<br/>그 선택을 의심해본 적은 거의 없었습니다.
                 </p>
