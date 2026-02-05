@@ -332,7 +332,7 @@ const LandingPage: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                transition={{ duration: 0.8, delay: 3 }}
                 className="w-[calc(100%+2rem)] -mx-4 md:mx-0 md:absolute md:right-0 md:top-0 md:w-[55%] h-[80vh] md:h-[140vh] mt-4 md:mt-0 order-3 md:order-2 z-20"
               >
                 <div className="w-full h-full overflow-hidden">
