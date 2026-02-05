@@ -55,7 +55,7 @@ const Opening: React.FC<OpeningProps> = ({ onComplete }) => {
                 />
               </svg>
               <span
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[18px] md:text-[22px] font-semibold text-black lowercase tracking-tight"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[18px] md:text-[22px] font-semibold text-black lowercase tracking-tight leading-none"
                 style={{ fontFamily: "'Geist', sans-serif" }}
               >
                 poundynut
