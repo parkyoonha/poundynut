@@ -677,7 +677,7 @@ const LandingPage: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8 }}
-                  className="space-y-3 md:space-y-4"
+                  className="space-y-3 md:space-y-4 pt-10 md:pt-20"
                 >
                   <p>
                     그래서 질문은 이렇게 바뀌었습니다.<br/>빵을 좋아하는 삶을 유지하면서도,<br/>몸에는 더 편안한 선택은 없을까?<br/>그 질문에서 이 브랜드는 시작되었습니다.
