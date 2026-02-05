@@ -695,75 +695,7 @@ const LandingPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Section 5 - Two Column Text (Sticky Scroll) */}
-        <div ref={section5WrapperRef} className="h-[400vh]">
-          <section
-            className="sticky top-0 flex h-screen px-4 md:px-[7.81vw] border-b-0 items-center justify-center overflow-hidden"
-          >
-            <div className="flex flex-col md:flex-row w-full h-full items-center md:items-stretch gap-0 overflow-visible">
-                {/* Left Text - 모바일 상단 50% */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  className="w-full md:w-1/2 h-[50vh] md:h-auto flex justify-center items-center relative"
-                >
-                  {/* 45도 대각선 - 모바일/데스크톱 각각 */}
-                  <div
-                    className="absolute z-20 hidden md:block "
-                    style={{
-                      width: '2px',
-                      height: '400px',
-                      backgroundColor: '#111111',
-                      transform: 'rotate(45deg)',
-                      transformOrigin: 'center',
-                      top: '50%',
-                      left: '50%',
-                      marginTop: '-200px',
-                      marginLeft: '-1px',
-                    }}
-                  />
-                  <div
-                    className="absolute z-20 md:hidden "
-                    style={{
-                      width: '2px',
-                      height: '220px',
-                      backgroundColor: '#111111',
-                      transform: 'rotate(45deg)',
-                      transformOrigin: 'center',
-                      top: '50%',
-                      left: '50%',
-                      marginTop: '-110px',
-                      marginLeft: '-1px',
-                    }}
-                  />
-                  <h2 className="text-3xl md:text-6xl font-geist-gothic font-medium text-gray-900 text-center">
-                    4 ingredients
-                  </h2>
-                </motion.div>
-
-                {/* Right Text - Scroll controlled, 모바일 하단 50% */}
-                <div className="w-full md:w-1/2 flex justify-center items-start overflow-hidden h-[50vh] md:h-screen">
-                  <motion.div
-                    className="text-2xl md:text-[2.7rem] font-gothic font-regular text-center flex flex-col gap-[150px] md:gap-[180px] pt-[0vh] md:pt-[46vh]"
-                    animate={{ y: -section6ScrollIndex * section5TextOffset }}
-                    transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-                  >
-                    {['NO 버터', 'NO 설탕', 'NO 밀가루', 'NO 대체당'].map((item, idx) => (
-                      <p
-                        key={idx}
-                        className={`transition-colors duration-500 ${idx === section6ScrollIndex ? 'text-gray-900' : 'text-gray-300'}`}
-                      >
-                        {item}
-                      </p>
-                    ))}
-                  </motion.div>
-                </div>
-              </div>
-          </section>
-        </div>
-
-        {/* Section 6 - Ingredients & Chart (Sticky Scroll) */}
+        {/* Section 5 - Ingredients & Chart (Sticky Scroll) */}
         <div ref={section6WrapperRef} className="h-[200vh]">
           <section className="sticky top-0 relative h-screen px-0 pt-[0.5cm] md:pt-[1cm] pb-0 border-b-0 flex items-end">
             {/* Text Layer - Above Almond Bar */}
@@ -836,6 +768,74 @@ const LandingPage: React.FC = () => {
                 </div>
               </div>
             </div>
+          </section>
+        </div>
+
+        {/* Section 6 - Two Column Text (Sticky Scroll) */}
+        <div ref={section5WrapperRef} className="h-[400vh]">
+          <section
+            className="sticky top-0 flex h-screen px-4 md:px-[7.81vw] border-b-0 items-center justify-center overflow-hidden"
+          >
+            <div className="flex flex-col md:flex-row w-full h-full items-center md:items-stretch gap-0 overflow-visible">
+                {/* Left Text - 모바일 상단 50% */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="w-full md:w-1/2 h-[50vh] md:h-auto flex justify-center items-center relative"
+                >
+                  {/* 45도 대각선 - 모바일/데스크톱 각각 */}
+                  <div
+                    className="absolute z-20 hidden md:block "
+                    style={{
+                      width: '2px',
+                      height: '400px',
+                      backgroundColor: '#111111',
+                      transform: 'rotate(45deg)',
+                      transformOrigin: 'center',
+                      top: '50%',
+                      left: '50%',
+                      marginTop: '-200px',
+                      marginLeft: '-1px',
+                    }}
+                  />
+                  <div
+                    className="absolute z-20 md:hidden "
+                    style={{
+                      width: '2px',
+                      height: '220px',
+                      backgroundColor: '#111111',
+                      transform: 'rotate(45deg)',
+                      transformOrigin: 'center',
+                      top: '50%',
+                      left: '50%',
+                      marginTop: '-110px',
+                      marginLeft: '-1px',
+                    }}
+                  />
+                  <h2 className="text-3xl md:text-6xl font-geist-gothic font-medium text-gray-900 text-center">
+                    4 ingredients
+                  </h2>
+                </motion.div>
+
+                {/* Right Text - Scroll controlled, 모바일 하단 50% */}
+                <div className="w-full md:w-1/2 flex justify-center items-start overflow-hidden h-[50vh] md:h-screen">
+                  <motion.div
+                    className="text-2xl md:text-[2.7rem] font-gothic font-regular text-center flex flex-col gap-[150px] md:gap-[180px] pt-[0vh] md:pt-[46vh]"
+                    animate={{ y: -section6ScrollIndex * section5TextOffset }}
+                    transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+                  >
+                    {['NO 버터', 'NO 설탕', 'NO 밀가루', 'NO 대체당'].map((item, idx) => (
+                      <p
+                        key={idx}
+                        className={`transition-colors duration-500 ${idx === section6ScrollIndex ? 'text-gray-900' : 'text-gray-300'}`}
+                      >
+                        {item}
+                      </p>
+                    ))}
+                  </motion.div>
+                </div>
+              </div>
           </section>
         </div>
 
