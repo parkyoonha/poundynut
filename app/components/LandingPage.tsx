@@ -10,35 +10,35 @@ const recipeData = [
     id: 1,
     title: '플레이버 버터',
     cooktime: '5min',
-    ingredients: '과일잼(망고 추천)\n버터\n\n가루류(커피/녹차/얼그레이 추천)\n메이플시럽\n버터',
+    ingredients: '과일잼(망고 추천)\n버터\n\n가루류 1t(커피/녹차/얼그레이 추천)\n메이플시럽 1T\n버터 100g',
     steps: '1. 과일잼을 준비해주세요\n(가루류는 메이플시럽과 섞어줘요)\n2. 해동된 버터를 유산지에 싸서 용기에 넣고\n전자렌지에 15초 내외로 데워주세요\n3. 잼/시럽에 녹인 가루를 버터와 섞어주세요\n4. 완성된 플레이버버터를 기호에 맞게 빵에 스프레드',
   },
   {
     id: 2,
-    title: '크림치즈 사과',
+    title: '사과 샌드위치',
     cooktime: '5min',
-    ingredients: '사과\n꿀\n바질페스토\n크림치즈',
+    ingredients: '사과 1/2개\n꿀 1T\n바질페스토 1T\n크림치즈 1T',
     steps: '1. 얇게 썬 사과를 빵 위에 올려주세요\n2. 꿀을 뿌려주세요\n3. 크림치즈와 바질페스토를 얹어주세요',
   },
   {
     id: 3,
-    title: '토마토 마리네이드',
+    title: '크림치즈바질토마토',
     cooktime: '5min',
-    ingredients: '방울토마토/양파\n올리브오일/식초\n바질/소금/후추',
-    steps: '1. 방울토마토와 양파를 썰어주세요\n2. 올리브오일,식초,소금,후추,바질을 넣어 섞어주세요\n3. 기호에 맞게 빵 위에 얹어주세요',
+    ingredients: '방울토마토 3-4개/꿀 1T\n크림치즈 1T\n바질페스토 1t',
+    steps: '1. 바질페스토를 빵에 스프레드\n2. 그 위에 크림치즈 스프레드\n3. 꿀에 버무린 잘게 썬 방울토마토를 얹어주세요.',
   },
   {
     id: 4,
     title: '잠봉뵈르',
     cooktime: '5min',
-    ingredients: '잠봉햄\n버터\n꿀\n바질',
-    steps: '1. 버터를 썰어서 올려주세요\n2. 꿀과 바질을 뿌려주세요\n3. 잠봉햄을 얹어주세요',
+    ingredients: '잠봉햄\n버터 1T\n시럽 1T/마요네즈 1T\n얇게 썬 양파 1/3',
+    steps: '1. 버터를 빵에 스프레드해주세요.\n2. 마요네즈,시럽,양파를 섞어 버터 위에 얹어주세요\n3. 잠봉햄을 얹어주세요',
   },
   {
     id: 5,
-    title: '머쉬룸 샌드위치',
+    title: '버섯 샌드위치',
     cooktime: '5min',
-    ingredients: '버섯/양파\n마요네즈/시럽\n버터/소금',
+    ingredients: '버섯/소금 한꼬집\n버터 1T\n시럽 1T/마요네즈 1T\n얇게 썬 양파 1/3',
     steps: '1. 버섯을 썰어서 소금간을 해 볶아주세요\n2. 마요네즈와 시럽을 섞고 얇게 썬 양파와 섞어주세요\n3. 빵에 버터를 바르고 양파-버섯 순으로 얹어주세요',
   },
 ];
@@ -376,7 +376,7 @@ const LandingPage: React.FC = () => {
           {/* Videos */}
           <div
             ref={videoScrollRef}
-            className="overflow-x-auto scrollbar-hide mt-50 md:mt-100 snap-x snap-mandatory md:snap-none md:overflow-visible"
+            className="overflow-x-auto scrollbar-hide mt-40 md:mt-100 snap-x snap-mandatory md:snap-none md:overflow-visible"
           >
             <div className="flex flex-row gap-6 md:gap-6 items-center md:justify-center px-[20vw] md:px-[7.81vw] w-max md:w-full">
               {[VID_SLIDE_1, VID_SLIDE_2, VID_SLIDE_3].map((video, index) => (
@@ -435,7 +435,7 @@ const LandingPage: React.FC = () => {
               >
                 
                 <img src="/gg2.webp" alt="Gallery image 1" className="w-full h-full object-cover" />
-                <span className="absolute bottom-4 right-4 z-10 text-sm text-black font-semibold group-hover:opacity-0 transition-opacity duration-300">flavor butter</span>
+                <span className="absolute bottom-4 right-4 z-10 text-sm text-black font-semibold group-hover:opacity-0 transition-opacity duration-300">flavor butter spread</span>
                 <div className="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex flex-row items-start justify-start gap-27 px-[1.5cm] py-[2cm] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="flex flex-col space-y-5">
@@ -446,9 +446,9 @@ const LandingPage: React.FC = () => {
                   <div className="flex flex-col space-y-5 text-left">
                     <span className="text-black text-[0.8rem] group-hover:text-[0.875rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>과일잼(망고 추천)<br/>
 버터<br/><br/>
-가루류(커피/녹차/얼그레이 추천)<br/>
-메이플시럽<br/>
-버터</span>
+가루류 1t(커피/녹차/얼그레이 추천)<br/>
+메이플시럽 1T<br/>
+버터 100g</span>
                     <span className="text-black text-[0.8rem] group-hover:text-[0.875rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>1. 과일잼을 준비해주세요<br/>
 (가루류는 메이플시럽과 섞어줘요)<br/>
 2. 해동된 버터를 유산지에 싸서 용기에 넣고 <br/>
@@ -466,16 +466,18 @@ const LandingPage: React.FC = () => {
                 transition={{ delay: 0.1 }}
                 className="flex-1 h-full bg-gray-200 overflow-hidden relative group cursor-pointer"
               >
-                <img src="/tr.webp" alt="Gallery image 5" className="w-full h-full object-cover scale-125 translate-y-2" />
-                <span className="absolute bottom-4 right-4 z-10 text-sm text-black font-semibold group-hover:opacity-0 transition-opacity duration-300">mushroom</span>
+                <img src="/tr.webp" alt="Gallery image 5" className="w-full h-full object-cover scale-130 translate-y-8" />
+                <span className="absolute bottom-4 right-4 z-10 text-sm text-black font-semibold group-hover:opacity-0 transition-opacity duration-300">mushroom sandwich</span>
                 <div className="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex flex-col items-start justify-start px-[1.5cm] py-[2cm] space-y-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-black text-[1.6rem] group-hover:text-[1.75rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>머쉬룸 샌드위치</span>
+                  <span className="text-black text-[1.6rem] group-hover:text-[1.75rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>버섯 샌드위치</span>
                   <span className="text-black text-[0.875rem] group-hover:text-[1.1rem] font-medium leading-tight !-mt-3 transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>cooktime<br/>
 5min</span>
-                  <span className="text-black text-[0.8rem] group-hover:text-[0.875rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>버섯/양파<br/>
-마요네즈/시럽<br/>
-버터/소금</span>
+                  <span className="text-black text-[0.8rem] group-hover:text-[0.875rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>버섯/소금 한꼬집<br/>
+버터 1T<br/>
+시럽 1T/마요네즈 1T<br/>
+얇게 썬 양파1/3<br/>
+</span>
                   <span className="text-black text-[0.8rem] group-hover:text-[0.875rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>1.버섯을 썰어서 소금간을 해 볶아주세요<br/>
 2. 마요네즈와 시럽을 섞고 얇게 썬 양파와
 섞어주세요<br/>
@@ -496,18 +498,18 @@ const LandingPage: React.FC = () => {
                 className="flex-1 h-full bg-gray-200 overflow-hidden relative group cursor-pointer"
               >
                 <img src="/uu.webp" alt="Gallery image 4" className="w-full h-full object-cover scale-160 -translate-y-10 translate-x-10" />
-                <span className="absolute bottom-4 right-4 z-10 text-sm text-white font-semibold group-hover:opacity-0 transition-opacity duration-300">Jambon-Beurre</span>
+                <span className="absolute bottom-4 right-4 z-10 text-sm text-black font-semibold group-hover:opacity-0 transition-opacity duration-300">Jambon-Beurre</span>
                 <div className="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex flex-col items-start justify-start px-[1.5cm] py-[2cm] space-y-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-black text-[1.6rem] group-hover:text-[1.75rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>잠봉뵈르</span>
                   <span className="text-black text-[0.875rem] group-hover:text-[1.1rem] font-medium leading-tight !-mt-3 transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>cooktime<br/>
 5min</span>
                   <span className="text-black text-[0.8rem] group-hover:text-[0.875rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>잠봉햄<br/>
-버터<br/>
-꿀<br/>
-바질</span>
-                  <span className="text-black text-[0.8rem] group-hover:text-[0.875rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>1. 버터를 썰어서 올려주세요<br/>
-2.꿀과 바질을 뿌려주세요<br/>
+버터 1T<br/>
+시럽 1T/마요네즈 1T<br/>
+얇게 썬 양파1/3</span>
+                  <span className="text-black text-[0.8rem] group-hover:text-[0.875rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>1. 버터를 빵에 스프레드해주세요.<br/>
+2.마요네즈,시럽,양파를 섞어 버터 위에 얹어주세요<br/>
 3.잠봉햄을 얹어주세요</span>
                 
                 </div>
@@ -519,21 +521,20 @@ const LandingPage: React.FC = () => {
                 viewport={{ once: true }}
                 className="flex-1 h-full bg-gray-200 overflow-hidden relative group cursor-pointer"
               >
-                <img src="/gs.webp" alt="Gallery image 3" className="w-full h-full object-cover scale-112 translate-x-2 -translate-y-3" />
+                <img src="/gs.webp" alt="Gallery image 3" className="w-full h-full object-cover scale-105 translate-x-2 translate-y-3" />
                 
-                <span className="absolute bottom-4 right-4 z-10 text-sm text-black font-semibold group-hover:opacity-0 transition-opacity duration-300">marinated tomato</span>
+                <span className="absolute bottom-4 right-4 z-10 text-sm text-white font-semibold group-hover:opacity-0 transition-opacity duration-300">creamcheese basil tomato</span>
                 <div className="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex flex-col items-start justify-start px-[1.5cm] py-[2cm] space-y-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-black text-[1.6rem] group-hover:text-[1.75rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>토마토 마리네이드</span>
+                  <span className="text-black text-[1.6rem] group-hover:text-[1.75rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>크림치즈바질토마토</span>
                   <span className="text-black text-[0.875rem] group-hover:text-[1.1rem] font-medium leading-tight !-mt-3 transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>cooktime<br/>
 5min</span>
-                  <span className="text-black text-[0.8rem] group-hover:text-[0.875rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>방울토마토/양파<br/>
-올리브오일/식초<br/>
-바질/소금/후추</span>
-                  <span className="text-black text-[0.8rem] group-hover:text-[0.875rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>1. 방울토마토와 양파를 썰어주세요<br/>
-2. 올리브오일,식초,소금,후추,바질을 넣어
-섞어주세요<br/>
-3.기호에 맞게 빵 위에 얹어주세요</span>
+                  <span className="text-black text-[0.8rem] group-hover:text-[0.875rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>방울토마토 3-4개/꿀 1T<br/>
+크림치즈 1T<br/>
+바질페스토 1t</span>
+                  <span className="text-black text-[0.8rem] group-hover:text-[0.875rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>1. 바질페스토를 빵에 스프레드<br/>
+2. 그 위에 크림치즈 스프레드<br/>
+3.꿀에 버무린 잘게 썬 방울토마토를 얹어주세요.</span>
                 </div>
               </motion.div>
               {/* Image 5 */}
@@ -544,16 +545,16 @@ const LandingPage: React.FC = () => {
                 className="flex-1 h-full bg-gray-200 overflow-hidden relative group cursor-pointer"
               >
                <img src="/tt.webp" alt="Gallery image 2" className="w-full h-full object-cover scale-120 -translate-x-10" />
-               <span className="absolute bottom-4 right-4 z-10 text-sm text-white font-semibold group-hover:opacity-0 transition-opacity duration-300">creamcheese apple</span>
+               <span className="absolute bottom-4 right-4 z-10 text-sm text-white font-semibold group-hover:opacity-0 transition-opacity duration-300">apple sandwich</span>
                 <div className="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex flex-col items-start justify-start px-[1.5cm] py-[2cm] space-y-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-black text-[1.6rem] group-hover:text-[1.75rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>크림치즈 사과</span>
+                  <span className="text-black text-[1.6rem] group-hover:text-[1.75rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>사과 샌드위치</span>
                   <span className="text-black text-[0.875rem] group-hover:text-[1.1rem] font-medium leading-tight !-mt-3 transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>cooktime<br/>
 5min</span>
-                  <span className="text-black text-[0.8rem] group-hover:text-[0.875rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>사과<br/>
-꿀<br/>
-바질페스토<br/>
-크림치즈</span>
+                  <span className="text-black text-[0.8rem] group-hover:text-[0.875rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>사과 1/2개<br/>
+꿀 1T<br/>
+바질페스토 1T<br/>
+크림치즈 1T</span>
                   <span className="text-black text-[0.8rem] group-hover:text-[0.875rem] font-medium transition-all duration-300" style={{ fontFamily: "'Gothic A1', sans-serif" }}>1. 얇게 썬 사과를 빵 위에 올려주세요<br/>
 2. 꿀을 뿌려주세요<br/>
 3.크림치즈와 바질페스토를 얹어주세요</span>
@@ -571,7 +572,7 @@ const LandingPage: React.FC = () => {
                 onClick={() => setSelectedRecipe(recipeData[0])}
               >
                 <img src="/gg.webp" alt="Gallery image 1" className="w-full h-full object-cover scale-150 translate-x-10 -translate-y-10" />
-                <span className="absolute bottom-2 right-4 z-10 text-sm text-black font-semibold flex items-center gap-1">flavor butter <ArrowRight className="w-4 h-4" /></span>
+                <span className="absolute bottom-2 right-4 z-10 text-sm text-black font-semibold flex items-center gap-1">flavor butter spread <ArrowRight className="w-4 h-4" /></span>
               </motion.div>
             </div>
 
@@ -582,10 +583,10 @@ const LandingPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="w-full h-[400px] bg-gray-200 overflow-hidden relative cursor-pointer"
-                onClick={() => setSelectedRecipe(recipeData[1])}
+                onClick={() => setSelectedRecipe(recipeData[4])}
               >
-                <img src="/tt.webp" alt="Gallery image 2" className="w-full h-full object-cover scale-100 -translate-x-0 -translate-y-0" />
-                <span className="absolute bottom-2 right-4 z-10 text-sm text-white font-semibold flex items-center gap-1">creamcheese apple <ArrowRight className="w-4 h-4" /></span>
+                <img src="/tr.webp" alt="Gallery image 5" className="w-full h-full object-cover scale-135 translate-y-8" />
+                <span className="absolute bottom-2 right-4 z-10 text-sm text-black font-semibold flex items-center gap-1">mushroom sandwich<ArrowRight className="w-4 h-4" /></span>
               </motion.div>
             </div>
 
@@ -596,10 +597,10 @@ const LandingPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="w-full h-[400px] bg-gray-200 overflow-hidden relative cursor-pointer"
-                onClick={() => setSelectedRecipe(recipeData[2])}
+                onClick={() => setSelectedRecipe(recipeData[3])}
               >
-                <img src="/qq.webp" alt="Gallery image 3" className="w-full h-full object-cover scale-100 translate-x-0 -translate-y-0" />
-                <span className="absolute bottom-2 right-4 z-10 text-sm text-black font-semibold flex items-center gap-1">marinated tomato <ArrowRight className="w-4 h-4" /></span>
+                <img src="/uu.webp" alt="Gallery image 4" className="w-full h-full object-cover scale-160 -translate-y-6 translate-x-10" />
+                <span className="absolute bottom-2 right-4 z-10 text-sm text-black font-semibold flex items-center gap-1">Jambon-Beurre <ArrowRight className="w-4 h-4" /></span>
               </motion.div>
             </div>
 
@@ -610,10 +611,10 @@ const LandingPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="w-full h-[400px] bg-gray-200 overflow-hidden relative cursor-pointer"
-                onClick={() => setSelectedRecipe(recipeData[3])}
+                onClick={() => setSelectedRecipe(recipeData[2])}
               >
-                <img src="/KakaoTalk_20260203_181056189.webp" alt="Gallery image 5" className="w-full h-full object-cover" />
-                <span className="absolute bottom-2 right-4 z-10 text-sm text-white font-semibold flex items-center gap-1">Jambon-Beurre <ArrowRight className="w-4 h-4" /></span>
+                <img src="/gs.webp" alt="Gallery image 3" className="w-full h-full object-cover scale-100 translate-x-0 translate-y-0" />
+                <span className="absolute bottom-2 right-4 z-10 text-sm text-white font-semibold flex items-center gap-1">creamcheese basil tomato <ArrowRight className="w-4 h-4" /></span>
               </motion.div>
             </div>
 
@@ -624,11 +625,11 @@ const LandingPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="w-full h-[400px] bg-gray-200 overflow-hidden relative cursor-pointer"
-                onClick={() => setSelectedRecipe(recipeData[4])}
+                onClick={() => setSelectedRecipe(recipeData[1])}
               >
-                <img src="/uu.webp" alt="Gallery image 4" className="w-full h-full object-cover scale-150 -translate-y-10 translate-x-10" />
+                <img src="/tt.webp" alt="Gallery image 2" className="w-full h-full object-cover scale-120 -translate-x-10" />
                 
-                <span className="absolute bottom-2 right-4 z-10 text-sm text-black font-semibold flex items-center gap-1">mushroom <ArrowRight className="w-4 h-4" /></span>
+                <span className="absolute bottom-2 right-4 z-10 text-sm text-white font-semibold flex items-center gap-1"> apple sandwich <ArrowRight className="w-4 h-4" /></span>
               </motion.div>
             </div>
           </div>
@@ -905,7 +906,7 @@ const LandingPage: React.FC = () => {
         </div>
 
         {/* Section 8 - Horizontal Scroll Gallery */}
-        <section className="h-auto md:h-[1240px] py-12 md:py-30 border-b-0">
+        <section className="h-auto md:h-[1240px] py-12 md:py-30 border-b-0 pt-30 md:pt-75">
           {/* Title */}
           <motion.a
             href="https://smartstore.naver.com/poundynut"
