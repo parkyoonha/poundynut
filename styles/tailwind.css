@@ -4,7 +4,7 @@
 @import 'tw-animate-css';
 
 @theme {
-  --breakpoint-md: 900px;
+  --breakpoint-md: 1030px;
 }
 
 :root, html, body, * {

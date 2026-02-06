@@ -47,9 +47,9 @@ const recipeData = [
 // const IMG_MEAL = "https://images.unsplash.com/photo-1684248182045-e34f0ad5559d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080";
 
 // Local Video Paths
-const VID_SLIDE_1 = "/20250822_1526_Almond Mixture Creation_simple_compose_01k387a8xkfqpt7f8tbx7f2nhv.mp4";
-const VID_SLIDE_2 = "/KakaoTalk_20250822_154744133.mp4";
-const VID_SLIDE_3 = "/KakaoTalk_20260203_173820482.mp4";
+const VID_SLIDE_1 = "/KakaoTalk_20260203_173820482.mp4";
+const VID_SLIDE_2 = "/20250822_1526_Almond Mixture Creation_simple_compose_01k387a8xkfqpt7f8tbx7f2nhv.mp4";
+const VID_SLIDE_3 = "/KakaoTalk_20250822_154744133.mp4";
 
 // Fallback/Sample Videos (Mixkit) - Uncomment these to see video in the preview if you don't have local files yet
 // const VID_SLIDE_1 = "https://assets.mixkit.co/videos/preview/mixkit-woman-putting-bread-in-the-oven-4293-large.mp4";
@@ -308,7 +308,7 @@ const LandingPage: React.FC = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 2.2 }}
-                  className="text-[40px] md:text-[58px] font-semibold lowercase text-gray-900 tracking-tight font-geist-gothic leading-none mt-0.5 md:mt-[0.5cm] mb-30 md:mb-0"
+                  className="text-[40px] md:text-[clamp(42px,4vw,58px)] font-semibold lowercase text-gray-900 tracking-tight font-geist-gothic leading-none mt-0.5 md:mt-[0.5cm] mb-30 md:mb-0"
                 >
                   poundynut
                 </motion.h1>
@@ -351,7 +351,7 @@ const LandingPage: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 2.8}}
-            className="hidden md:block absolute bottom-[1cm] left-[1cm] w-[35%] text-[42px] font-medium text-gray-900 leading-[1.2] font-geist-gothic z-30"
+            className="hidden md:block absolute bottom-[1cm] left-[1cm] w-[35%] text-[clamp(32px,2.8vw,42px)] font-medium text-gray-900 leading-[1.2] font-geist-gothic z-30"
           >
             whole almond baked for <br/>better dietary habits.
           </motion.h2>
@@ -365,7 +365,7 @@ const LandingPage: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="w-full md:w-[36%] text-[14px] md:text-[16px] text-gray-900 leading-normal font-medium md:pr-[1cm] "
               style={{ fontFamily: "'Gothic A1', sans-serif" }}
             >
@@ -466,7 +466,7 @@ const LandingPage: React.FC = () => {
                 transition={{ delay: 0.1 }}
                 className="flex-1 h-full bg-gray-200 overflow-hidden relative group cursor-pointer"
               >
-                <img src="/tr.webp" alt="Gallery image 5" className="w-full h-full object-cover scale-130 translate-y-8" />
+                <img src="/ds.webp" alt="Gallery image 5" className="w-full h-full object-cover scale-130 translate-y-0 translate-x-10" />
                 <span className="absolute bottom-4 right-4 z-10 text-sm text-black font-semibold group-hover:opacity-0 transition-opacity duration-300">mushroom sandwich</span>
                 <div className="absolute inset-0 bg-gray-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute inset-0 flex flex-col items-start justify-start px-[1.5cm] py-[2cm] space-y-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -585,7 +585,7 @@ const LandingPage: React.FC = () => {
                 className="w-full h-[400px] bg-gray-200 overflow-hidden relative cursor-pointer"
                 onClick={() => setSelectedRecipe(recipeData[4])}
               >
-                <img src="/tr.webp" alt="Gallery image 5" className="w-full h-full object-cover scale-135 translate-y-8" />
+                <img src="/ds.webp" alt="Gallery image 5" className="w-full h-full object-cover scale-130 translate-y-0 translate-x-10" />
                 <span className="absolute bottom-2 right-4 z-10 text-sm text-black font-semibold flex items-center gap-1">mushroom sandwich<ArrowRight className="w-4 h-4" /></span>
               </motion.div>
             </div>
@@ -998,7 +998,7 @@ const LandingPage: React.FC = () => {
           <div className="mt-12 md:mt-30 px-4 md:px-[150px] pb-8 flex flex-col md:flex-row justify-between items-start gap-6 md:gap-0">
             <div className="flex flex-col gap-2">
               <span className="text-base md:text-[calc(18px+(1920px-100vw)*0.01)] font-semibold font-gothic">poundynut</span>
-              <span className="text-[11px] md:text-[calc(13px+(1920px-100vw)*0.008)] text-gray-500 font-gothic leading-5 md:leading-6">대표 | 정유경<br/>contact | yoonha9772@gmail.com<br/>사업자등록번호 | 123-45-67890<br/>주소 | 서울특별시 강남구 테헤란로 427 위워크타워 10층</span>
+              <span className="text-[11px] md:text-[calc(13px+(1920px-100vw)*0.008)] text-gray-500 font-gothic leading-5 md:leading-6">대표 | 정유경<br/>contact | yoonha9772@gmail.com<br/>사업자등록번호 | 878-40-00506<br/>주소 | 강원특별자치도 강릉시 남산길 17번길 8</span>
             </div>
             <motion.a
               href="https://smartstore.naver.com/poundynut"
