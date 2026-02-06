@@ -299,7 +299,7 @@ const LandingPage: React.FC = () => {
       <div className="w-full max-w-[1920px] mx-auto bg-white overflow-visible">
         
         {/* Section 1 - h1, h2, Image */}
-        <section className="relative h-screen border-b-0 bg-white flex flex-col overflow-visible pb-[1cm]">
+        <section className="relative h-dvh border-b-0 bg-white flex flex-col overflow-visible pb-[1cm]">
           <div className="flex flex-col px-4 md:pl-[1cm] md:pr-0 pt-4 md:pt-[0cm] overflow-visible">
             <div className="flex flex-col md:flex-row items-start overflow-visible">
               {/* h1 */}
@@ -366,7 +366,7 @@ const LandingPage: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full md:w-[36%] text-[14px] md:text-[16px] text-gray-900 leading-normal font-medium md:pr-[1cm] "
+              className="w-full md:w-[36%] text-[14px] md:text-[16px] text-gray-900 leading-normal font-medium md:pl-[0.25cm] "
               style={{ fontFamily: "'Gothic A1', sans-serif" }}
             >
               우리의 목표는 단순합니다. 빵을 끊게 만드는 브랜드가 아니라, 빵을 더 오래, 더 편안하게 즐길 수 있도록 돕는 것.  익숙한 식사의 형태는 유지하되, 그 안의 재료와 방향을 조금 더 나은 쪽으로 조율하는 일입니다.
@@ -392,7 +392,7 @@ const LandingPage: React.FC = () => {
                     <video
                       ref={(el) => { videoRefs.current[index] = el; }}
                       className="absolute inset-0 w-full h-full object-cover"
-                      style={{ filter: index === 0 ? 'saturate(1.15) contrast(1.0) brightness(0.9)' : index === 2 ? 'saturate(0.9) contrast(1.0) brightness(1.0)' : 'saturate(1.0) contrast(1.15)' }}
+                      style={{ filter: index === 0 ? 'saturate(1.18) contrast(1.0) brightness(1.0)' : index === 2 ? 'saturate(1.0) contrast(1.0) brightness(1.0)' : 'saturate(1.0) contrast(1.15) brightness(1.1)' }}
                       src={video}
                       muted
                       loop
