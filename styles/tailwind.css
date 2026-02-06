@@ -5,6 +5,8 @@
 
 @theme {
   --breakpoint-md: 1030px;
+  --breakpoint-lg: 1350px;
+  --breakpoint-xl: 1536px;
 }
 
 :root, html, body, * {

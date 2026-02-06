@@ -48,8 +48,8 @@ const recipeData = [
 
 // Local Video Paths
 const VID_SLIDE_1 = "/KakaoTalk_20260203_173820482.mp4";
-const VID_SLIDE_2 = "/20250822_1526_Almond Mixture Creation_simple_compose_01k387a8xkfqpt7f8tbx7f2nhv.mp4";
-const VID_SLIDE_3 = "/KakaoTalk_20250822_154744133.mp4";
+const VID_SLIDE_2 = "/KakaoTalk_20250822_154744133.mp4";
+const VID_SLIDE_3 = "/20250822_1526_Almond Mixture Creation_simple_compose_01k387a8xkfqpt7f8tbx7f2nhv.mp4";
 
 // Fallback/Sample Videos (Mixkit) - Uncomment these to see video in the preview if you don't have local files yet
 // const VID_SLIDE_1 = "https://assets.mixkit.co/videos/preview/mixkit-woman-putting-bread-in-the-oven-4293-large.mp4";
@@ -272,14 +272,14 @@ const LandingPage: React.FC = () => {
 
   const slides = [
     {
-      img: "/KakaoTalk_20251025_114940779.jpg",
+      img: "/KakaoTalk_20251025_114940779.webp",
       video: VID_SLIDE_1,
       text: "day1",
       review: "almondbread<br/>tomato<br/>greekyogurt<br/>eggs",
 
     },
     {
-      img: "/KakaoTalk_20251025_114940779_01.jpg",
+      img: "/KakaoTalk_20251025_114940779_01.webp",
       video: VID_SLIDE_2,
       text: "day2",
       review: "almondbread<br/>friedegg<br/>lettuce<br/>tomato",
@@ -308,7 +308,7 @@ const LandingPage: React.FC = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 2.2 }}
-                  className="text-[40px] md:text-[clamp(42px,4vw,58px)] font-semibold lowercase text-gray-900 tracking-tight font-geist-gothic leading-none mt-0.5 md:mt-[0.5cm] mb-30 md:mb-0"
+                  className="text-[40px] md:text-[42px] lg:text-[50px] xl:text-[58px] font-semibold lowercase text-gray-900 tracking-tight font-geist-gothic leading-none mt-0.5 md:mt-[0.5cm] mb-30 md:mb-0"
                 >
                   poundynut
                 </motion.h1>
@@ -351,7 +351,7 @@ const LandingPage: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 2.8}}
-            className="hidden md:block absolute bottom-[1cm] left-[1cm] w-[35%] text-[clamp(32px,2.8vw,42px)] font-medium text-gray-900 leading-[1.2] font-geist-gothic z-30"
+            className="hidden md:block absolute bottom-[1cm] left-[1cm] w-[35%] text-[34px] lg:text-[42px] xl:text-[42px] font-medium text-gray-900 leading-[1.2] font-geist-gothic z-30"
           >
             whole almond baked for <br/>better dietary habits.
           </motion.h2>
@@ -392,7 +392,7 @@ const LandingPage: React.FC = () => {
                     <video
                       ref={(el) => { videoRefs.current[index] = el; }}
                       className="absolute inset-0 w-full h-full object-cover"
-                      style={{ filter: index === 2 ? 'saturate(1.0) contrast(1.12) brightness(1.2)' : 'saturate(1.1) contrast(1.15)' }}
+                      style={{ filter: index === 0 ? 'saturate(1.15) contrast(1.0) brightness(0.9)' : index === 2 ? 'saturate(0.9) contrast(1.0) brightness(1.0)' : 'saturate(1.0) contrast(1.15)' }}
                       src={video}
                       muted
                       loop
