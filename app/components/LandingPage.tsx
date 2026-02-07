@@ -60,10 +60,7 @@ const LandingPage: React.FC = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false, duration: 20, axis: 'y', watchDrag: false });
   const [selectedIndex, setSelectedIndex] = React.useState(0);
   const section7WrapperRef = useRef<HTMLDivElement>(null);
-  const section5WrapperRef = useRef<HTMLDivElement>(null);
   const section6WrapperRef = useRef<HTMLDivElement>(null);
-  const [section6ScrollIndex, setSection6ScrollIndex] = React.useState(0);
-  const [section5TextOffset, setSection5TextOffset] = React.useState(235);
   const [section6BarProgress, setSection6BarProgress] = React.useState(0);
   const [selectedRecipe, setSelectedRecipe] = useState<typeof recipeData[0] | null>(null);
   const [centeredVideoIndex, setCenteredVideoIndex] = useState(0);
@@ -116,54 +113,7 @@ const LandingPage: React.FC = () => {
     };
   }, [emblaApi, selectedIndex]);
 
-  // Handle scroll-based Section 5 text animation (sticky scroll)
-  React.useEffect(() => {
-    const wrapper = section5WrapperRef.current;
-    if (!wrapper) return;
-
-    const handleScroll = () => {
-      const rect = wrapper.getBoundingClientRect();
-      const wrapperHeight = wrapper.offsetHeight;
-      const viewportHeight = window.innerHeight;
-      const scrollableDistance = wrapperHeight - viewportHeight;
-
-      // Calculate how far we've scrolled into the wrapper
-      const scrollProgress = -rect.top / scrollableDistance;
-
-      // Map scroll progress to index (0-3), giving last item more time
-      // 0-20%: index 0, 20-40%: index 1, 40-60%: index 2, 60-100%: index 3
-      let newIndex = 0;
-      if (scrollProgress >= 0.6) newIndex = 3;
-      else if (scrollProgress >= 0.4) newIndex = 2;
-      else if (scrollProgress >= 0.2) newIndex = 1;
-
-      setSection6ScrollIndex(newIndex);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial call
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  // Handle responsive text offset for Section 5
-  React.useEffect(() => {
-    const updateOffset = () => {
-      const isMobile = window.innerWidth < 900;
-      setSection5TextOffset(isMobile ? 180 : 235);
-    };
-
-    updateOffset();
-    window.addEventListener('resize', updateOffset);
-
-    return () => {
-      window.removeEventListener('resize', updateOffset);
-    };
-  }, []);
-
-  // Handle scroll-based Section 6 bar animation (sticky scroll)
+  // Handle scroll-based Section 5 bar animation (sticky scroll)
   React.useEffect(() => {
     const wrapper = section6WrapperRef.current;
     if (!wrapper) return;
