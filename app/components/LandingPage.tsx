@@ -308,7 +308,7 @@ const LandingPage: React.FC = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 2.2 }}
-                  className="text-[40px] md:text-[42px] lg:text-[50px] xl:text-[58px] font-semibold lowercase text-gray-900 tracking-tight font-geist-gothic leading-none mt-0.5 md:mt-[0.5cm] mb-30 md:mb-0"
+                  className="text-[30px] md:text-[38px] lg:text-[50px] xl:text-[55px] font-semibold lowercase text-gray-900 tracking-tight font-geist-gothic leading-none mt-0.5 md:mt-[0.5cm] mb-10 md:mb-0"
                 >
                   poundynut
                 </motion.h1>
@@ -319,11 +319,11 @@ const LandingPage: React.FC = () => {
               {/* 모바일용 h2 - 이미지 상단 */}
               <div className="w-full order-2 md:hidden mt-0 px-0">
                 <motion.h2
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 2.5}}
-                  className="w-full text-[25px] font-medium text-gray-900 leading-8 font-geist-gothic text-right mt-0"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 1.5, ease: "easeOut" }}
+                  className="w-full text-[20px] font-medium text-gray-900 leading-6 font-geist-gothic text-right mt-0"
                 >
                   whole almond baked for <br/>better dietary habits.
                 </motion.h2>
@@ -333,7 +333,7 @@ const LandingPage: React.FC = () => {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0 }}
-                className="w-[calc(100%+2rem)] -mx-4 md:mx-0 md:absolute md:right-0 md:top-0 md:w-[55%] h-[80vh] md:h-[140vh] mt-4 md:mt-0 order-3 md:order-2 z-20"
+                className="w-[calc(100%+2rem)] -mx-4 md:mx-0 md:absolute md:right-0 md:top-0 md:w-[55%] h-[80vh] md:h-[110vh] mt-4 md:mt-0 order-3 md:order-2 z-20"
               >
                 <div className="w-full h-full overflow-hidden">
                   <ImageWithFallback
@@ -351,42 +351,55 @@ const LandingPage: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 2.8}}
-            className="hidden md:block absolute bottom-[1cm] left-[1cm] w-[35%] text-[34px] lg:text-[42px] xl:text-[42px] font-medium text-gray-900 leading-[1.2] font-geist-gothic z-30"
+            className="hidden md:block absolute bottom-[1cm] left-[1cm] w-[35%] text-[34px] lg:text-[42px] xl:text-[35px] font-medium text-gray-900 leading-[1.2] font-geist-gothic z-30"
           >
             whole almond baked for <br/>better dietary habits.
           </motion.h2>
         </section>
 
         {/* Section 2 - p, Videos */}
-        <section className="relative h-auto border-b-0 bg-transparent flex flex-col py-12 pt-35 md:pt-[19vh] pb-30 md:pb-50">
+        <section className="relative h-auto border-b-0 bg-transparent flex flex-col py-12 pt-[12vw] md:pt-[35vh] pb-[15vw] md:pb-50">
           {/* p text */}
-          <div className="px-4 md:pl-[2vw] md:pr-0">
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="w-full md:w-[36%] text-[14px] md:text-[16px] text-gray-900 leading-normal font-medium md:pl-[0.25cm] "
-              style={{ fontFamily: "'Gothic A1', sans-serif" }}
-            >
-              우리의 목표는 단순합니다. 빵을 끊게 만드는 브랜드가 아니라, 빵을 더 오래, 더 편안하게 즐길 수 있도록 돕는 것.  익숙한 식사의 형태는 유지하되, 그 안의 재료와 방향을 조금 더 나은 쪽으로 조율하는 일입니다.
-            </motion.p>
+          <div className="px-4 md:px-[0vw]">
+            <div className="md:max-w-[1038px] md:mx-auto flex justify-between items-start">
+              <motion.a
+                href="https://smartstore.naver.com/poundynut"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ x: 5 }}
+                className="group flex items-center gap-1 text-[9px] md:text-[12px] font-geist-gothic text-gray-600 hover:text-black transition-colors"
+              >
+                Naver Smartstore
+                <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
+              </motion.a>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                className="text-[9px] md:text-[11px] text-gray-900 leading-normal font-semibold"
+                style={{ fontFamily: "'Gothic A1', sans-serif" }}
+              >
+               
+operation : 9:00-17:00
+              </motion.p>
+            </div>
           </div>
 
           {/* Videos */}
           <div
             ref={videoScrollRef}
-            className="overflow-x-auto scrollbar-hide mt-40 md:mt-100 snap-x snap-mandatory md:snap-none md:overflow-visible"
+            className="overflow-x-auto scrollbar-hide mt-[20vw] md:mt-30 snap-x snap-mandatory md:snap-none md:overflow-visible"
           >
             <div className="flex flex-row gap-6 md:gap-6 items-center md:justify-center px-[20vw] md:px-[7.81vw] w-max md:w-full">
               {[VID_SLIDE_1, VID_SLIDE_2, VID_SLIDE_3].map((video, index) => (
                 <motion.div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.5, duration: 0.6 }}
-                  className="w-[60vw] flex-shrink-0 md:flex-shrink md:w-[330px] snap-center"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 1.5, ease: "easeOut" }}
+                  className="w-[60vw] flex-shrink-0 md:flex-shrink md:w-[335px] snap-center"
                 >
                   <div className="w-full aspect-square overflow-hidden relative bg-gray-100">
                     <video
@@ -413,13 +426,14 @@ const LandingPage: React.FC = () => {
 
         {/* Section 3 - Image Gallery */}
         <section className="relative h-auto border-b-0 bg-white">
-          <div className="px-4 md:px-[7.81vw] pt-12 pb-40 md:py-24">
+          <div className="px-4 md:px-[4vw] pt-12 pb-40 md:py-24">
             {/* Title */}
             <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="text-[2rem] md:text-[3.7rem] font-geist-gothic font-medium text-gray-900 mb-8 md:mb-12 leading-tight"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              className="text-[1.5rem] md:text-[2.6rem] font-geist-gothic font-medium text-gray-900 mb-8 md:mb-12 leading-tight"
             >
               Try these recieps<br/>
             </motion.h2>
@@ -428,9 +442,10 @@ const LandingPage: React.FC = () => {
             <div className="hidden md:flex flex-row gap-[3.13vw] mb-[2.92vw] h-[34vw]">
               {/* Left: 3:2 horizontal rectangle */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
                 className="flex-[2.12] h-full bg-gray-200 overflow-hidden relative group cursor-pointer"
               >
                 
@@ -460,10 +475,10 @@ const LandingPage: React.FC = () => {
               </motion.div>
               {/* Right: vertical rectangle */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
                 className="flex-1 h-full bg-gray-200 overflow-hidden relative group cursor-pointer"
               >
                 <img src="/ds.webp" alt="Gallery image 5" className="w-full h-full object-cover scale-130 translate-y-0 translate-x-10" />
@@ -492,9 +507,10 @@ const LandingPage: React.FC = () => {
             <div className="hidden md:flex flex-row gap-[3.13vw] mb-[2.92vw] h-[34vw]">
               {/* Image 3 */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
                 className="flex-1 h-full bg-gray-200 overflow-hidden relative group cursor-pointer"
               >
                 <img src="/uu.webp" alt="Gallery image 4" className="w-full h-full object-cover scale-160 -translate-y-10 translate-x-10" />
@@ -516,9 +532,10 @@ const LandingPage: React.FC = () => {
               </motion.div>
               {/* Image 4 */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
                 className="flex-1 h-full bg-gray-200 overflow-hidden relative group cursor-pointer"
               >
                 <img src="/gs.webp" alt="Gallery image 3" className="w-full h-full object-cover scale-105 translate-x-2 translate-y-3" />
@@ -539,9 +556,10 @@ const LandingPage: React.FC = () => {
               </motion.div>
               {/* Image 5 */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
                 className="flex-1 h-full bg-gray-200 overflow-hidden relative group cursor-pointer"
               >
                <img src="/tt.webp" alt="Gallery image 2" className="w-full h-full object-cover scale-120 -translate-x-10" />
@@ -565,9 +583,10 @@ const LandingPage: React.FC = () => {
             {/* Mobile Row 1 - Image 1 alone */}
             <div className="flex md:hidden mb-6">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
                 className="w-full h-[400px] bg-gray-200 overflow-hidden relative cursor-pointer"
                 onClick={() => setSelectedRecipe(recipeData[0])}
               >
@@ -579,9 +598,10 @@ const LandingPage: React.FC = () => {
             {/* Mobile Row 2 - Image 2 */}
             <div className="flex md:hidden mb-6">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
                 className="w-full h-[400px] bg-gray-200 overflow-hidden relative cursor-pointer"
                 onClick={() => setSelectedRecipe(recipeData[4])}
               >
@@ -593,9 +613,10 @@ const LandingPage: React.FC = () => {
             {/* Mobile Row 3 - Image 3 */}
             <div className="flex md:hidden mb-6">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
                 className="w-full h-[400px] bg-gray-200 overflow-hidden relative cursor-pointer"
                 onClick={() => setSelectedRecipe(recipeData[3])}
               >
@@ -607,9 +628,10 @@ const LandingPage: React.FC = () => {
             {/* Mobile Row 4 - Image 4 */}
             <div className="flex md:hidden mb-6">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
                 className="w-full h-[400px] bg-gray-200 overflow-hidden relative cursor-pointer"
                 onClick={() => setSelectedRecipe(recipeData[2])}
               >
@@ -621,9 +643,10 @@ const LandingPage: React.FC = () => {
             {/* Mobile Row 5 - Image 5 */}
             <div className="flex md:hidden mb-6">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
                 className="w-full h-[400px] bg-gray-200 overflow-hidden relative cursor-pointer"
                 onClick={() => setSelectedRecipe(recipeData[1])}
               >
@@ -641,13 +664,14 @@ const LandingPage: React.FC = () => {
      
 
         {/* Section 4 - Story */}
-        <section className="h-auto border-b-0 items-center bg-[#e7e8ec]">
+        <section className="h-auto border-b-0 items-center bg-[#ffffff]">
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 w-full px-4 md:px-[7.81vw] py-12 md:py-24 items-start">
             {/* Title */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
               className="w-full md:w-1/2"
             >
               <h2 className="text-[34px] md:text-[4rem] font-geist-gothic font-medium leading-[1.1] md:leading-[1.0] word-keep-all text-gray-900 py-0 md:py-0">
@@ -657,12 +681,13 @@ const LandingPage: React.FC = () => {
 
             {/* Supporting Text */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
               className="w-full md:w-1/2 pt-13 md:pt-0"
             >
-              <div className="text-[13px] md:text-xl text-black space-y-3 md:space-y-4 leading-normal md:leading-relaxed text-justify" style={{ fontFamily: "'Gothic A1', sans-serif", fontWeight: 500 }}>
+              <div className="text-[12px] md:text-xl text-black space-y-3 md:space-y-4 leading-normal md:leading-relaxed text-justify" style={{ fontFamily: "'Gothic A1', sans-serif", fontWeight: 500 }}>
                 <p>
                   한때 우리는 밀가루를 너무도 자연스럽게 먹고 있었습니다.<br/>아침의 토스트, 바쁜 날의 간편한 한 끼,<br/>일상 곳곳에 빵은 늘 함께 있었죠.<br/>익숙하고 맛있었기에,<br/>그 선택을 의심해본 적은 거의 없었습니다.
                 </p>
@@ -673,10 +698,10 @@ const LandingPage: React.FC = () => {
                   그렇다고 빵을 포기하고 싶지는 않았습니다.<br/>우리는 ‘참아야 하는 식단’보다<br/>‘오래 지속할 수 있는 방식’을 원했기 때문입니다.
                 </p>
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 1.5, ease: "easeOut" }}
                   className="space-y-3 md:space-y-4 pt-10 md:pt-20"
                 >
                   <p>
@@ -694,39 +719,42 @@ const LandingPage: React.FC = () => {
             </motion.div>
           </div>
         </section>
+        
+ 
 
-        {/* Section 5 - Ingredients & Chart (Sticky Scroll) */}
+ {/* Section 5 - Ingredients & Chart (Sticky Scroll) */}
         <div ref={section6WrapperRef} className="h-[200vh]">
-          <section className="sticky top-0 relative h-screen px-0 pt-[0.5cm] md:pt-[1cm] pb-0 border-b-0 flex items-end">
+          <section className="sticky top-0 relative h-screen px-0 pt-[0.5cm] md:pt-[2cm] pb-0 border-b-0 flex items-end">
             {/* Text Layer - Above Almond Bar */}
-            <div className="absolute left-6 md:left-[13.5%] md:-translate-x-1/2 top-1/2 -translate-y-1/2 z-20">
+            <div className="absolute left-[17%] md:left-[13%] -translate-x-1/2 top-1/2 -translate-y-1/2 z-20">
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="text-4xl md:text-7xl space-y-1 md:space-y-2 text-gray-800 font-geist font-semibold leading-tight absolute bottom-full mb-58 md:mb-30 whitespace-nowrap ml-0 md:ml-55"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                className="text-3xl md:text-6xl space-y-1 md:space-y-2 text-gray-800 font-geist font-semibold leading-tight absolute bottom-full left-[50px] -translate-x-1/4 mb-30 md:mb-20 whitespace-nowrap"
               >
                 <p>more than 80%</p>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                className="text-[18px] md:text-5xl space-y-1 md:space-y-2 text-gray-800 font-gothic font-medium leading-tight"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                className="text-[16px] md:text-4xl space-y-1 md:space-y-2 text-gray-800 font-gothic font-medium leading-tight"
               >
                 <p>단백질 9g,<br/> 식이섬유 4g,<br/>당류 1g</p>
               </motion.div>
             </div>
 
             {/* Chart Layer - Full Width */}
-            <div className="w-full h-full">
+            <div className="w-[100%] h-full mx-auto">
               <div className="flex flex-row gap-0 w-full h-full items-end">
-                <div className="flex-[2] md:flex-1 h-full flex flex-col items-center">
+                <div className="flex-[1.5] md:flex-1 h-full flex flex-col items-center">
                   <div className="w-full flex-1 relative flex items-end">
                     <div
                       className="w-full bg-[#b8bcc4] transition-all duration-300"
-                      style={{ height: `${90 + section6BarProgress * 15}%` }}
+                      style={{ height: `${60 + section6BarProgress * 15}%` }}
                     />
                     <div className="absolute left-1/2 -translate-x-1/2 bottom-8 md:bottom-12 z-20">
                       <span className="text-[13px] md:text-[calc(16px+(1920px-100vw)*0.01)] font-bold text-gray-800 font-gothic">아몬드</span>
@@ -737,7 +765,7 @@ const LandingPage: React.FC = () => {
                   <div className="w-full flex-1 relative flex items-end">
                     <div
                       className="w-full bg-gray-100 transition-all duration-300"
-                      style={{ height: `${1 + section6BarProgress * 2}%` }}
+                      style={{ height: `${1 + section6BarProgress * 1.5}%` }}
                     />
                     <div className="absolute left-1/2 -translate-x-1/2 bottom-8 md:bottom-12 z-20">
                       <span className="text-[12px] md:text-[calc(16px+(1920px-100vw)*0.01)] font-bold text-gray-800 font-gothic">천일염</span>
@@ -748,7 +776,7 @@ const LandingPage: React.FC = () => {
                   <div className="w-full flex-1 relative flex items-end">
                     <div
                       className="w-full bg-gray-200 transition-all duration-300"
-                      style={{ height: `${20 + section6BarProgress * 10}%` }}
+                      style={{ height: `${10 + section6BarProgress * 10}%` }}
                     />
                     <div className="absolute left-1/2 -translate-x-1/2 bottom-8 md:bottom-12 z-20">
                       <span className="text-[12px] md:text-[calc(16px+(1920px-100vw)*0.01)] font-bold text-gray-800 font-gothic">아마씨</span>
@@ -759,7 +787,7 @@ const LandingPage: React.FC = () => {
                   <div className="w-full flex-1 relative flex items-end">
                     <div
                       className="w-full bg-gray-300 transition-all duration-300"
-                      style={{ height: `${37.5 + section6BarProgress * 12}%` }}
+                      style={{ height: `${20 + section6BarProgress * 12}%` }}
                     />
                     <div className="absolute left-1/2 -translate-x-1/2 bottom-8 md:bottom-12 z-20">
                       <span className="text-[12px] md:text-[calc(16px+(1920px-100vw)*0.01)] font-bold text-gray-800 font-gothic">계란</span>
@@ -771,160 +799,107 @@ const LandingPage: React.FC = () => {
           </section>
         </div>
 
-        {/* Section 6 - Two Column Text (Sticky Scroll) */}
-        <div ref={section5WrapperRef} className="h-[400vh]">
+{/* Section 7 - Image Carousel (Sticky Scroll) */}
+        <div ref={section7WrapperRef} className="h-[200vh]">
           <section
-            className="sticky top-0 flex h-screen px-4 md:px-[7.81vw] border-b-0 items-center justify-center overflow-hidden"
+            className="sticky top-0 flex h-screen border-b-0 items-start min-[800px]:items-center px-4 min-[800px]:px-[7.81vw] pt-[5vh] min-[800px]:pt-0"
           >
-            <div className="flex flex-col md:flex-row w-full h-full items-center md:items-stretch gap-0 overflow-visible">
-                {/* Left Text - 모바일 상단 50% */}
+          <div className="flex flex-col min-[800px]:flex-row min-[800px]:items-start w-full h-full min-[800px]:h-auto gap-0 min-[800px]:gap-16">
+            {/* Left: Title + Supporting Text */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              className="w-full h-1/4 min-[800px]:h-auto min-[800px]:w-[45%] flex flex-col items-end min-[800px]:items-start justify-center min-[800px]:justify-start min-[800px]:pt-[5vh] text-right min-[800px]:text-left"
+            >
+              <h2 className="text-[12px] min-[800px]:text-[14px] font-geist-gothic font-medium text-gray-900 leading-tight">
+                NO 4 INGREDIENTS
+              </h2>
+              <p
+                className="text-[12px] min-[800px]:text-[14px] text-gray-600 leading-relaxed mt-4 min-[800px]:mt-6"
+                style={{ fontFamily: "'Gothic A1', sans-serif", fontWeight: 500 }}
+              >
+               NO 버터<br/>NO 설탕<br/>NO 밀가루<br/>NO 대체당
+              </p>
+            </motion.div>
+
+            {/* Right: Carousel Group */}
+            <div className="w-full h-3/4 min-[800px]:h-auto min-[800px]:w-[80%] min-[800px]:self-center flex flex-col items-start gap-4 min-[800px]:gap-6 pt-25 min-[800px]:pt-0">
+              {/* Day Title */}
+              <AnimatePresence mode="wait">
                 <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  className="w-full md:w-1/2 h-[50vh] md:h-auto flex justify-center items-center relative"
+                  key={selectedIndex}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.4 }}
                 >
-                  {/* 45도 대각선 - 모바일/데스크톱 각각 */}
-                  <div
-                    className="absolute z-20 hidden md:block "
-                    style={{
-                      width: '2px',
-                      height: '400px',
-                      backgroundColor: '#111111',
-                      transform: 'rotate(45deg)',
-                      transformOrigin: 'center',
-                      top: '50%',
-                      left: '50%',
-                      marginTop: '-200px',
-                      marginLeft: '-1px',
-                    }}
-                  />
-                  <div
-                    className="absolute z-20 md:hidden "
-                    style={{
-                      width: '2px',
-                      height: '220px',
-                      backgroundColor: '#111111',
-                      transform: 'rotate(45deg)',
-                      transformOrigin: 'center',
-                      top: '50%',
-                      left: '50%',
-                      marginTop: '-110px',
-                      marginLeft: '-1px',
-                    }}
-                  />
-                  <h2 className="text-3xl md:text-6xl font-geist-gothic font-medium text-gray-900 text-center">
-                    4 ingredients
-                  </h2>
+                  <h3 className="text-2xl min-[800px]:text-[clamp(1.5rem,2vw,2.2rem)] font-geist-gothic font-regular text-gray-900">{slides[selectedIndex]?.text}</h3>
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Image + Review Row */}
+              <div className="relative min-[800px]:flex min-[800px]:flex-row min-[800px]:gap-8 min-[800px]:items-start w-full">
+                {/* Image Carousel */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 1.5, ease: "easeOut" }}
+                  className="w-[clamp(45%,900px-100vw,75%)] min-[800px]:w-[clamp(55%,calc(120%_-_4vw),90%)]"
+                >
+                  <div className="w-full aspect-square overflow-hidden" ref={emblaRef}>
+                    <div className="flex flex-col h-full gap-4">
+                      {slides.map((slide, index) => (
+                        <div key={index} className="flex-[0_0_100%] min-w-0 h-full">
+                          <div className="h-full overflow-hidden w-full relative bg-gray-100">
+                            <img
+                              src={slide.img}
+                              alt="Almond bread"
+                              className="absolute inset-0 w-full h-full object-cover"
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </motion.div>
 
-                {/* Right Text - Scroll controlled, 모바일 하단 50% */}
-                <div className="w-full md:w-1/2 flex justify-center items-start overflow-hidden h-[50vh] md:h-screen">
-                  <motion.div
-                    className="text-2xl md:text-[2.7rem] font-gothic font-regular text-center flex flex-col gap-[150px] md:gap-[180px] pt-[0vh] md:pt-[46vh]"
-                    animate={{ y: -section6ScrollIndex * section5TextOffset }}
-                    transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
-                  >
-                    {['NO 버터', 'NO 설탕', 'NO 밀가루', 'NO 대체당'].map((item, idx) => (
+                {/* Review Text - absolute positioned to top-right of image */}
+                <div className="absolute left-0 top-[calc(100%_+_1rem)] w-[40%] min-[800px]:relative min-[800px]:left-auto min-[800px]:top-auto min-[800px]:w-[45%] min-[800px]:pt-4">
+                  <AnimatePresence mode="wait">
+                    <motion.div
+                      key={selectedIndex}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.4 }}
+                    >
                       <p
-                        key={idx}
-                        className={`transition-colors duration-500 ${idx === section6ScrollIndex ? 'text-gray-900' : 'text-gray-300'}`}
-                      >
-                        {item}
-                      </p>
-                    ))}
-                  </motion.div>
+                        className="text-xl min-[800px]:text-[clamp(1.5rem,2.1vw,2.3rem)] font-geist-gothic font-regular text-gray-900 leading-[22px] min-[800px]:leading-[clamp(24px,2.5vw,35px)]"
+                        dangerouslySetInnerHTML={{ __html: slides[selectedIndex]?.review || '' }}
+                      />
+                    </motion.div>
+                  </AnimatePresence>
                 </div>
               </div>
-          </section>
-        </div>
-
-        {/* Section 7 - Image Carousel (Sticky Scroll) */}
-        <div ref={section7WrapperRef} className="h-[250vh]">
-          <section
-            className="sticky top-0 flex h-screen border-b-0 items-center px-4 md:px-0"
-          >
-          <div className="flex flex-col md:flex-row gap-6 md:gap-8 w-full items-center">
-            {/* Left: Title (synced with carousel) */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="w-full md:flex-[0.7] text-center flex justify-center items-center pb-6 md:pb-0"
-            >
-              <motion.div
-                key={selectedIndex}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4 }}
-              >
-                <h3 className="text-4xl md:text-[3.75vw] font-geist-gothic font-regular text-gray-900">{slides[selectedIndex]?.text}</h3>
-              </motion.div>
-            </motion.div>
-
-            {/* Center: Square Image Carousel */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="w-full md:w-[40%] md:px-0"
-            >
-              <div className="w-full aspect-square overflow-hidden" ref={emblaRef}>
-                <div className="flex flex-col h-full gap-4">
-                  {slides.map((slide, index) => (
-                    <div key={index} className="flex-[0_0_100%] min-w-0 h-full">
-                      <div className="h-full overflow-hidden w-full relative bg-gray-100">
-                        <img
-                          src={slide.img}
-                          alt="Almond bread"
-                          className="absolute inset-0 w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Right: Review Text (synced with image carousel - fade transition) */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="w-full md:flex-[1.3] text-center flex justify-center items-center"
-            >
-              <motion.div
-                key={selectedIndex}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4 }}
-                className="space-y-4 md:space-y-9"
-              >
-                <p
-                  className="text-3xl md:text-[2.92vw] font-geist-gothic font-regular text-gray-900 leading-none"
-                  dangerouslySetInnerHTML={{ __html: slides[selectedIndex]?.review || '' }}
-                />
-              </motion.div>
-            </motion.div>
+            </div>
           </div>
         </section>
         </div>
 
-        {/* Section 8 - Horizontal Scroll Gallery */}
-        <section className="h-auto md:h-[1240px] py-12 md:py-30 border-b-0 pt-30 md:pt-75">
+       {/* Section 8 - Horizontal Scroll Gallery */}
+        <section className="h-auto md:h-[1240px] py-12 md:py-30 border-b-0 pt-30 md:pt-30">
           {/* Title */}
           <motion.a
             href="https://smartstore.naver.com/poundynut"
             target="_blank"
             rel="noopener noreferrer"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
             className="text-3xl md:text-[calc(48px+(1920px-100vw)*0.02)] font-geist-gothic font-semibold text-gray-900 mb-10 md:mb-20 px-4 md:px-[150px] flex items-center gap-4 cursor-pointer hover:opacity-70 transition-opacity"
           >
             store
@@ -973,14 +948,14 @@ const LandingPage: React.FC = () => {
                 ].map((item, idx) => (
                 <motion.div
                   key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: idx * 0.1 }}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 1.5, ease: "easeOut" }}
                   className="flex flex-col items-start"
                 >
                   <span className="text-gray-900 text-xs md:text-[calc(14px+(1920px-100vw)*0.01)] font-semibold font-gothic mb-4 md:mb-6">{item.label}</span>
-                  <div className="relative group cursor-pointer overflow-hidden w-[240px] h-[320px] md:w-[380px] md:h-[510px]">
+                  <div className="relative group cursor-pointer overflow-hidden w-[240px] h-[320px] md:w-[410px] md:h-[510px]">
                     {item.src ? (
                       <img src={item.src} alt={`Gallery ${idx + 1}`} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" />
                     ) : (
@@ -994,6 +969,9 @@ const LandingPage: React.FC = () => {
             </div>
           </div>
 
+        
+
+       
           {/* Footer */}
           <div className="mt-12 md:mt-30 px-4 md:px-[150px] pb-8 flex flex-col md:flex-row justify-between items-start gap-6 md:gap-0">
             <div className="flex flex-col gap-2">
