@@ -755,7 +755,7 @@ operation : 9:00-17:00
 {/* Section 7 - Image Carousel (Sticky Scroll) */}
         <div ref={section7WrapperRef} className="h-[200vh]">
           <section
-            className="sticky top-0 flex h-screen border-b-0 items-start min-[800px]:items-center px-4 min-[800px]:px-[7.81vw] pt-[15vh] min-[800px]:pt-0"
+            className="sticky top-0 flex h-screen border-b-0 items-start min-[800px]:items-center px-4 min-[800px]:px-[7.81vw] pt-[5vh] min-[800px]:pt-0"
           >
           <div className="flex flex-col min-[800px]:flex-row min-[800px]:items-start w-full h-full min-[800px]:h-auto gap-0 min-[800px]:gap-16">
             {/* Left: Title + Supporting Text */}
