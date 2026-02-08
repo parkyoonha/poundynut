@@ -255,10 +255,11 @@ const LandingPage: React.FC = () => {
               {/* h1 */}
               <div className="w-full md:w-1/2 order-1 md:order-1">
                 <motion.h1
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 2.2 }}
-                  className="text-[30px] md:text-[38px] lg:text-[50px] xl:text-[55px] font-semibold lowercase text-gray-900 tracking-tight font-geist-gothic leading-none mt-0.5 md:mt-[0.5cm] mb-10 md:mb-0"
+                  initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
+                  className="text-[30px] md:text-[38px] lg:text-[50px] xl:text-[50px] font-semibold lowercase text-gray-900 tracking-tight font-geist-gothic leading-none mt-0.5 md:mt-[0.5cm] mb-10 md:mb-0"
                 >
                   poundynut
                 </motion.h1>
@@ -270,9 +271,9 @@ const LandingPage: React.FC = () => {
               <div className="w-full order-2 md:hidden mt-0 px-0">
                 <motion.h2
                   initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 1.5, ease: "easeOut" }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
                   className="w-full text-[20px] font-medium text-gray-900 leading-6 font-geist-gothic text-right mt-0"
                 >
                   whole almond baked for <br/>better dietary habits.
@@ -298,9 +299,10 @@ const LandingPage: React.FC = () => {
 
           {/* h2 - 섹션 하단 배치 (데스크톱) */}
           <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 2.8}}
+            initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
             className="hidden md:block absolute bottom-[1cm] left-[1cm] w-[35%] text-[34px] lg:text-[42px] xl:text-[35px] font-medium text-gray-900 leading-[1.2] font-geist-gothic z-30"
           >
             whole almond baked for <br/>better dietary habits.
@@ -614,7 +616,7 @@ operation : 9:00-17:00
      
 
         {/* Section 4 - Story */}
-        <section className="h-auto border-b-0 items-center bg-[#ffffff]">
+        <section className="h-auto border-b-0 items-center bg-gray-100">
           <div className="flex flex-col md:flex-row gap-8 md:gap-16 w-full px-4 md:px-[7.81vw] py-12 md:py-24 items-start">
             {/* Title */}
             <motion.div
@@ -624,7 +626,7 @@ operation : 9:00-17:00
               transition={{ duration: 1.5, ease: "easeOut" }}
               className="w-full md:w-1/2"
             >
-              <h2 className="text-[34px] md:text-[4rem] font-geist-gothic font-medium leading-[1.1] md:leading-[1.0] word-keep-all text-gray-900 py-0 md:py-0">
+              <h2 className="text-[34px] md:text-[4rem] font-geist-gothic font-medium leading-[1.0] md:leading-[1.0] word-keep-all text-gray-900 py-0 md:py-0">
                 I want to <br/>share my diet<br/>experience.
               </h2>
             </motion.div>
@@ -638,6 +640,7 @@ operation : 9:00-17:00
               className="w-full md:w-1/2 pt-13 md:pt-0"
             >
               <div className="text-[12px] md:text-xl text-black space-y-3 md:space-y-4 leading-normal md:leading-relaxed text-justify" style={{ fontFamily: "'Gothic A1', sans-serif", fontWeight: 500 }}>
+               
                 <p>
                   한때 우리는 밀가루를 너무도 자연스럽게 먹고 있었습니다.<br/>아침의 토스트, 바쁜 날의 간편한 한 끼,<br/>일상 곳곳에 빵은 늘 함께 있었죠.<br/>익숙하고 맛있었기에,<br/>그 선택을 의심해본 적은 거의 없었습니다.
                 </p>
@@ -752,7 +755,7 @@ operation : 9:00-17:00
 {/* Section 7 - Image Carousel (Sticky Scroll) */}
         <div ref={section7WrapperRef} className="h-[200vh]">
           <section
-            className="sticky top-0 flex h-screen border-b-0 items-start min-[800px]:items-center px-4 min-[800px]:px-[7.81vw] pt-[5vh] min-[800px]:pt-0"
+            className="sticky top-0 flex h-screen border-b-0 items-start min-[800px]:items-center px-4 min-[800px]:px-[7.81vw] pt-[15vh] min-[800px]:pt-0"
           >
           <div className="flex flex-col min-[800px]:flex-row min-[800px]:items-start w-full h-full min-[800px]:h-auto gap-0 min-[800px]:gap-16">
             {/* Left: Title + Supporting Text */}
@@ -761,7 +764,7 @@ operation : 9:00-17:00
               whileInView={{ opacity: 1 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 1.5, ease: "easeOut" }}
-              className="w-full h-1/4 min-[800px]:h-auto min-[800px]:w-[45%] flex flex-col items-end min-[800px]:items-start justify-center min-[800px]:justify-start min-[800px]:pt-[5vh] text-right min-[800px]:text-left"
+              className="w-full h-1/4 min-[800px]:h-auto min-[800px]:w-[45%] flex flex-col items-center min-[800px]:items-start justify-center min-[800px]:justify-start min-[800px]:pt-[5vh] text-center min-[800px]:text-left"
             >
               <h2 className="text-[12px] min-[800px]:text-[14px] font-geist-gothic font-medium text-gray-900 leading-tight">
                 NO 4 INGREDIENTS

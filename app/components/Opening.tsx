@@ -12,7 +12,7 @@ const Opening: React.FC<OpeningProps> = ({ onComplete }) => {
     // Logo animation duration, then start exit
     const timer = setTimeout(() => {
       setPhase('exit');
-    }, 2000);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);
