@@ -343,14 +343,16 @@ operation : 9:00-17:00
             ref={videoScrollRef}
             className="overflow-x-auto scrollbar-hide mt-[20vw] md:mt-30 snap-x snap-mandatory md:snap-none md:overflow-visible"
           >
-            <div className="flex flex-row gap-6 md:gap-6 items-center md:justify-center px-[20vw] md:px-[7.81vw] w-max md:w-full">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              className="flex flex-row gap-6 md:gap-6 items-center md:justify-center px-[20vw] md:px-[7.81vw] w-max md:w-full"
+            >
               {[VID_SLIDE_1, VID_SLIDE_2, VID_SLIDE_3].map((video, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 1.5, ease: "easeOut" }}
                   className="w-[60vw] flex-shrink-0 md:flex-shrink md:w-[335px] snap-center"
                 >
                   <div className="w-full aspect-square overflow-hidden relative bg-gray-100">
@@ -370,9 +372,9 @@ operation : 9:00-17:00
                       } : undefined}
                     />
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
 
@@ -778,7 +780,7 @@ operation : 9:00-17:00
             </motion.div>
 
             {/* Right: Carousel Group */}
-            <div className="w-full h-3/4 min-[800px]:h-auto min-[800px]:w-[80%] min-[800px]:self-center flex flex-col items-start gap-4 min-[800px]:gap-6 pt-25 min-[800px]:pt-0">
+            <div className="w-full h-3/4 min-[800px]:h-auto min-[800px]:w-[80%] min-[800px]:self-center flex flex-col items-start gap-4 min-[800px]:gap-6 mt-30 min-[800px]:mt-0">
               {/* Day Title */}
               <AnimatePresence mode="wait">
                 <motion.div
@@ -892,19 +894,22 @@ operation : 9:00-17:00
               el.scrollLeft = Number(el.dataset.scrollLeft) - walk;
             }}
           >
-            <div className="flex gap-6 md:gap-[7.29vw] pr-4 md:pr-12" style={{ width: 'max-content' }}>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 1.5, ease: "easeOut" }}
+              className="flex gap-6 md:gap-[7.29vw] pr-4 md:pr-12"
+              style={{ width: 'max-content' }}
+            >
               {[
                   { src: '/11.webp', label: 'original 오리지널' },
                   { src: '/22.webp', label: 'vegan 비건' },
                   { src: '/33.webp', label: 'nuts 견과류' },
                   { src: '/44.webp', label: 'konjak 곤약' }
                 ].map((item, idx) => (
-                <motion.div
+                <div
                   key={idx}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 1.5, ease: "easeOut" }}
                   className="flex flex-col items-start"
                 >
                   <span className="text-gray-900 text-xs md:text-[calc(14px+(1920px-100vw)*0.01)] font-semibold font-gothic mb-4 md:mb-6">{item.label}</span>
@@ -917,9 +922,9 @@ operation : 9:00-17:00
                       </div>
                     )}
                   </div>
-                </motion.div>
+                </div>
               ))}
-            </div>
+            </motion.div>
           </div>
 
         
