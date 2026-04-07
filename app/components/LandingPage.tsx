@@ -47,8 +47,8 @@ const recipeData = [
 // const IMG_MEAL = "https://images.unsplash.com/photo-1684248182045-e34f0ad5559d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080";
 
 // Local Video Paths
-const VID_SLIDE_1 = "/KakaoTalk_20260203_173820482.mp4";
-const VID_SLIDE_2 = "/KakaoTalk_20250822_154744133.mp4";
+const VID_SLIDE_1 = "/KakaoTalk_20260203_173820482_h264.mp4";
+const VID_SLIDE_2 = "/KakaoTalk_20250822_154744133_h264.mp4";
 const VID_SLIDE_3 = "/20250822_1526_Almond Mixture Creation_simple_compose_01k387a8xkfqpt7f8tbx7f2nhv.mp4";
 
 // Fallback/Sample Videos (Mixkit) - Uncomment these to see video in the preview if you don't have local files yet
@@ -355,22 +355,37 @@ operation : 9:00-17:00
                   key={index}
                   className="w-[60vw] flex-shrink-0 md:flex-shrink md:w-[335px] snap-center"
                 >
-                  <div className="w-full aspect-square overflow-hidden relative bg-gray-100">
-                    <video
-                      ref={(el) => { videoRefs.current[index] = el; }}
-                      className="absolute inset-0 w-full h-full object-cover"
-                      style={{ filter: index === 0 ? 'saturate(1.18) contrast(1.0) brightness(1.0)' : index === 2 ? 'saturate(1.0) contrast(1.0) brightness(1.0)' : 'saturate(1.0) contrast(1.15) brightness(1.1)' }}
-                      src={video}
-                      muted
-                      loop
-                      playsInline
-                      onTimeUpdate={index === 2 ? (e) => {
-                        const video = e.currentTarget;
-                        if (video.currentTime >= 3) {
-                          video.currentTime = 0;
-                        }
-                      } : undefined}
-                    />
+                  <div className="w-full bg-gray-100 pb-8 md:pb-0">
+                    <div className="w-full aspect-square overflow-hidden relative">
+                      <video
+                        ref={(el) => { videoRefs.current[index] = el; }}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        style={{ filter: index === 0 ? 'saturate(1.18) contrast(1.0) brightness(1.0)' : index === 2 ? 'saturate(1.0) contrast(1.0) brightness(1.0)' : 'saturate(1.0) contrast(1.15) brightness(1.1)' }}
+                        src={video}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        onTimeUpdate={index === 2 ? (e) => {
+                          const video = e.currentTarget;
+                          if (video.currentTime >= 3) {
+                            video.currentTime = 0;
+                          }
+                        } : undefined}
+                      />
+                    </div>
+
+                    {/* Indicators - Mobile only */}
+                    <div className="flex justify-center gap-2 mt-4 md:hidden">
+                      {[0, 1, 2].map((dotIndex) => (
+                        <div
+                          key={dotIndex}
+                          className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                            dotIndex === centeredVideoIndex ? 'bg-gray-900' : 'bg-gray-400'
+                          }`}
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
               ))}
@@ -804,18 +819,32 @@ operation : 9:00-17:00
                   transition={{ duration: 1.5, ease: "easeOut" }}
                   className="w-[clamp(45%,900px-100vw,75%)] min-[800px]:w-[clamp(55%,calc(120%_-_4vw),90%)]"
                 >
-                  <div className="w-full aspect-square overflow-hidden" ref={emblaRef}>
-                    <div className="flex flex-col h-full gap-4">
-                      {slides.map((slide, index) => (
-                        <div key={index} className="flex-[0_0_100%] min-w-0 h-full">
-                          <div className="h-full overflow-hidden w-full relative bg-gray-100">
-                            <img
-                              src={slide.img}
-                              alt="Almond bread"
-                              className="absolute inset-0 w-full h-full object-cover"
-                            />
+                  <div className="w-full bg-gray-100 pb-20">
+                    <div className="w-full aspect-square overflow-hidden" ref={emblaRef}>
+                      <div className="flex flex-col h-full gap-4">
+                        {slides.map((slide, index) => (
+                          <div key={index} className="flex-[0_0_100%] min-w-0 h-full">
+                            <div className="h-full overflow-hidden w-full relative">
+                              <img
+                                src={slide.img}
+                                alt="Almond bread"
+                                className="absolute inset-0 w-full h-full object-cover"
+                              />
+                            </div>
                           </div>
-                        </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Carousel Indicators */}
+                    <div className="flex justify-center gap-2 mt-10">
+                      {slides.map((_, index) => (
+                        <div
+                          key={index}
+                          className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                            index === selectedIndex ? 'bg-gray-900' : 'bg-gray-400'
+                          }`}
+                        />
                       ))}
                     </div>
                   </div>
